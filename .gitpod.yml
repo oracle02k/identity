@@ -1,0 +1,13 @@
+# Image of workspace. Learn more: https://www.gitpod.io/docs/configure/workspaces/workspace-image
+image:
+  file: .gitpod.Dockerfile
+
+# List the start up tasks. Learn more: https://www.gitpod.io/docs/configure/workspaces/tasks
+#tasks:
+#  - name: docker-compose
+#    init: |
+#      docker-compose pull
+#    command: |
+#      docker-compose up
+
+
