@@ -6,7 +6,7 @@ services:
     build: ./docker/php
     volumes:
       - type: bind
-        source: ./src
-        target: /app/src
+        source: ./app
+        target: /app
     profiles:
       - extra

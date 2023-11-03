@@ -1,3 +1,9 @@
 FROM php:8.2-cli
 
+RUN apt-get update && apt-get install -y \
+  libsodium-dev \
+  unzip
+
+RUN docker-php-ext-install sodium
+
 COPY --from=composer /usr/bin/composer /usr/bin/composer
