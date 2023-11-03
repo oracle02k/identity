@@ -8,5 +8,6 @@ services:
       - type: bind
         source: ./app
         target: /app
+    working_dir: /app
     profiles:
       - extra
