@@ -6,7 +6,9 @@ image:
 tasks:
   - name: docker compose
     init: |
-      docker compose --profile extra build --no-cache
+      docker compose build --no-cache
+    command: |
+      docker compose up
 vscode:
   extensions:
     - devsense.phptools-vscode
