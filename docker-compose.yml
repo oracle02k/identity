@@ -9,5 +9,5 @@ services:
         source: ./app
         target: /app
     working_dir: /app
-    profiles:
-      - extra
+    tty: true
+    stdin_open: true
