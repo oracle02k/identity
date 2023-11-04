@@ -7,9 +7,8 @@ tasks:
   - name: docker compose
     init: |
       docker compose --profile extra build --no-cache
-#    command: |
-#      docker compose up
 vscode:
   extensions:
     - devsense.phptools-vscode
     - getpsalm.psalm-vscode-plugin
+    - junstyle.php-cs-fixer
