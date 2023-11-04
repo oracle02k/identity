@@ -6,4 +6,6 @@ elif [ ${1} = "phpunit" ]; then
     docker compose run php-cli vendor/bin/phpunit ${@:2}
 elif [ ${1} = "psalm" ]; then
     docker compose run php-cli vendor/bin/psalm ${@:2}
+elif [ ${1} = "php-cli" ]; then
+    docker compose run php-cli ${@:2}
 fi
