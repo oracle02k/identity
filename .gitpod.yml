@@ -9,9 +9,7 @@ tasks:
       docker compose --profile extra build --no-cache
 #    command: |
 #      docker compose up
-
-
 vscode:
   extensions:
-    - devsense.phptools-vscodee
-
+    - devsense.phptools-vscode
+    - getpsalm.psalm-vscode-plugin
