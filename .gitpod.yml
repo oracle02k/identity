@@ -6,11 +6,15 @@ image:
 tasks:
   - name: docker compose
     init: |
-      docker compose build --no-cache
+      docker compose build
     command: |
-      docker compose up
+      docker compose up -d
+      ./cmd composer install
 vscode:
   extensions:
     - devsense.phptools-vscode
+    - devsense.composer-php-vscode
+    - devsense.intelli-php-vscode
+    - devsense.profiler-php-vscode
     - getpsalm.psalm-vscode-plugin
     - junstyle.php-cs-fixer
