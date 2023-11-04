@@ -1,4 +1,4 @@
-# Image of workspace. Learn more: https://www.gitpod.io/docs/configure/workspaces/workspace-image
+
 image:
   file: .gitpod.Dockerfile
 
@@ -9,4 +9,9 @@ tasks:
       docker compose --profile extra build --no-cache
 #    command: |
 #      docker compose up
+
+
+vscode:
+  extensions:
+    - devsense.phptools-vscodee
 
