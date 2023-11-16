@@ -1,3 +1,4 @@
 /vendor/
 /app/vendor/
 .php-cs-fixer.cache
+/app/.phpunit.cache
