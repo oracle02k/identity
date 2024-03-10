@@ -17,10 +17,7 @@ class Derived extends Base
 
 final class IdentityTest extends TestCase
 {
-    /**
-     * @test
-     */
-    public function Identityは厳密比較可能(): void
+    public function testShouldBeIdentityStrictlyComparable(): void
     {
         $id1 = Identity::create(Base::class, 0);
         $id2 = Identity::create(Base::class, 0);
@@ -30,27 +27,21 @@ final class IdentityTest extends TestCase
         $this->assertFalse($id1 === $id3);
     }
 
-    /**
-     * @test
-     */
-    public function 異なる型Identityの比較はfalseとなる(): void
+    public function testShouldBeFalseWhenComparingIdentitiesOfDifferentTypes(): void
     {
         $id1 = Identity::create(Base::class, 0);
         $id2 = Identity::create(Other::class, 0);
 
-        //$this->assertFalse($id1 === $id2); // 静的解析が有効な場合、違う型の比較でエラーとなる
-        $this->assertTrue(true); //ダミーのテスト
+        //$this->assertFalse($id1 === $id2); // If static analysis is enabled, an error occurs because the type is different.
+        $this->assertTrue(true); //dummy assertion.
     }
 
-    /**
-     * @test
-     */
-    public function ベースクラスと派生クラスのId比較はfalseとなる(): void
+    public function testShouldBeFalseWhenComparingBaseClassAndDerivedClass(): void
     {
         $id1 = Identity::create(Base::class, 0);
         $id2 = Identity::create(Derived::class, 0);
 
-        //$this->assertFalse($id1 === $id2); // 静的解析が有効な場合、違う型の比較でエラーとなる
-        $this->assertTrue(true); //ダミーのテスト
+        //$this->assertFalse($id1 === $id2); // If static analysis is enabled, an error occurs because the type is different.
+        $this->assertTrue(true); //dummy assertion.
     }
 }
